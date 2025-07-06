@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.example.studyhub'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.example.studyhub"
@@ -29,7 +29,6 @@ android {
 }
 
 dependencies {
-
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
@@ -37,4 +36,34 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+
+    // PDF Viewer
+    implementation libs.android.pdf.viewer
+
+    // File picker
+    implementation libs.filepicker
+
+    // Permission management
+    implementation libs.dexter
+
+    // Room Database
+    implementation libs.room.runtime
+    annotationProcessor libs.room.compiler
+
+    // ViewModel and LiveData
+    implementation libs.lifecycle.viewmodel
+    implementation libs.lifecycle.livedata
+
+    // WebView for PPT
+    implementation libs.webkit
+
+    // For notification management
+    implementation libs.core
+
+    // Optional: For better RecyclerView performance
+    implementation libs.recyclerview
+
+    // Optional: For Glide image loading (if you'll show thumbnails)
+    implementation libs.glide
+    annotationProcessor libs.compiler
 }
